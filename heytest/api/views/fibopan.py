@@ -15,7 +15,7 @@ class Prueba(object):
 
 
 @api_view(['GET'])
-def getFibopan(request):
+def getFibopanFull(request):
     prueba = Prueba(
         name="Números de Fibonacci Pan-digitales",
         description="F(k) es el primer número de Fibonacci donde los primeros 9 dígitos "
@@ -25,14 +25,30 @@ def getFibopan(request):
             + "dos secuencias pan-digital del inicio y del final",
         result="To be discovered")
 
-    prueba.result = "K = " + str(goldenRatio(1000000))
+    prueba.result = "K = " + str(goldenRatio(1000000, "Full"))
+
+    serializer = PruebaSerializer(prueba)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getFibopanFaster(request):
+    prueba = Prueba(
+        name="Números de Fibonacci Pan-digitales",
+        description="F(k) es el primer número de Fibonacci donde los primeros 9 dígitos "
+            + "son una secuencia pan-digital y donde los últimos 9 dígitos también son una "
+            + "secuencia pan-digital. ¿Cuánto es K?. En la consola del servidor se puede "
+            + "ver la iteración y las dos secuencias pan-digital del inicio y del final",
+        result="To be discovered")
+
+    prueba.result = "K = " + str(goldenRatio(1000000, "Faster"))
 
     serializer = PruebaSerializer(prueba)
     return Response(serializer.data)
 
 
 # Using Golden ratio - IT WORKS! Founded! K is 329468!!!
-def goldenRatio(n):
+def goldenRatio(n, fof):
     golden_ratio = (1 + math.sqrt(5))/2
     start = 2
     m = 1
@@ -48,9 +64,15 @@ def goldenRatio(n):
         start = int(start * golden_ratio)
 
         # have to make it maximun 30 digits or else we will get overflow to infinite
-        if(start>1E30):
+        if(start > 1E30):
             start = int(start*1E-3)
         
+        # We apply the same to the normal fubonacci so it is faster, although we won't get
+        # the full fubonacci number with this, only the final numbers
+        # If fof is Faster it will execute this if, else it will be the normal fibonacci
+        if(m > 1E10 and fof == "Faster"):
+            m = m % 1000000000000000
+
         # First we check if the first numbers are pandigital
         if(isPandigital(set(str(start)[0:9]))):
             #print("\nSTART", i, len(str(m)), m, sep=": ")
@@ -59,7 +81,7 @@ def goldenRatio(n):
             # Second we check if the last numbers are pandigital, if they are we founded 
             # the number!
             if(isPandigital(set(str(m)[-9:]))):
-                print("\nFINISH AND FINISH\nIteration  |  # of Digits  |  Full number\n", 
+                print("\nIteration  |  # of Digits  |  Full number\n", 
                     i, len(str(m)), m, sep=": ")
                 print("START", str(start)[0:9], "FINISH", str(m)[-9:])
                 return i

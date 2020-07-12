@@ -10,6 +10,7 @@ urlpatterns = [
     re_path(r'^prueba/answer', views.getAnswer),
     re_path(r'^prueba/domingos', views.getDomingos),
     re_path(r'^prueba/password', views.getPassword),
-    re_path(r'^prueba/fibopan', views.getFibopan),
+    re_path(r'^prueba/fibopan_faster', views.getFibopanFaster),
+    re_path(r'^prueba/fibopan_full', views.getFibopanFull),
     re_path(r'^prueba/pascals', views.getPascals),
 ]
