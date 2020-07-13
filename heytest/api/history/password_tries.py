@@ -38,19 +38,23 @@ if __name__ == '__main__':
     #print(digitsh)
     print(digis)
 
-    # Compare the digits and put the digits in the correct order
-    for i in array:
-        # print(i[0], i[1], i[2])
+    # Double iteration just in case
+    for j in range(0, 2):
+        # It seems that with only one iteration it works fine
+        for i in array:
+            # print(i[0], i[1], i[2])
 
-        if(digis.index(i[0]) > digis.index(i[1])):
-            digis[digis.index(i[0])] = i[1]
-            digis[digis.index(i[1])] = i[0]
+            # Compare the digits and put the digits in the correct order
+            if(digis.index(i[0]) > digis.index(i[1])):
+                digis[digis.index(i[0])] = i[1]
+                digis[digis.index(i[1])] = i[0]
 
-        if(digis.index(i[1]) > digis.index(i[2])):
-            digis[digis.index(i[1])] = i[2]
-            digis[digis.index(i[2])] = i[1]
+            if(digis.index(i[1]) > digis.index(i[2])):
+                digis[digis.index(i[1])] = i[2]
+                digis[digis.index(i[2])] = i[1]
 
-        #print(i[0], digis.index(i[0]))
+            #print(i[0], digis.index(i[0]))
+        print(digis)
 
     print(digis)
 
