@@ -6,20 +6,20 @@ To resolve at least 1 of 4 different algorithm challenges and pass the "Prueba d
 
 # Description of the test
 A continuación encontrará 4 problemas de diferente nivel de dificultad, debe seleccionar
-libremente 1 problema y desarrollarlo cumpliendo los siguientes requerimientos.
-● Utilizar python 3.5 o superior
-● Crear un proyecto en Django 2.0 ó superior
+libremente 1 problema y desarrollarlo cumpliendo los siguientes requerimientos:  
+● Utilizar python 3.5 o superior  
+● Crear un proyecto en Django 2.0 ó superior  
 ● Instalar ​https://www.django-rest-framework.org/​ y crear un web service que al
 momento de ser llamado por petición GET deberá ejecutar la lógica para el problema
-seleccionado y responder por medio de Json el resultado del problema resuelto.
+seleccionado y responder por medio de Json el resultado del problema resuelto  
 ● Crear un repositorio en GitHub o Bitbucket y subir el código fuente de la solución
 (compartir el acceso al encargado de la prueba)
 
 # Algorithms and status
-- ¿Cuántos Domingos?:  
+- ¿Cuántos Domingos?  
 Not yet implemented
 
-- Derivar Contraseña (Ethical Hacking):  
+- Derivar Contraseña (Ethical Hacking)  
 Solved and Iplemented
 
 - Números de Fibonacci Pan-digitales  
@@ -31,16 +31,16 @@ Not yet implemented
 # URLs
 Those are the urls to use the REST GET services of each algorithm
 
-- ¿Cuántos Domingos?<br/>
+- ¿Cuántos Domingos?  
 http://127.0.0.1:8000/prueba/domingos
 
-- Derivar Contraseña (Ethical Hacking)<br/>
+- Derivar Contraseña (Ethical Hacking)  
 http://127.0.0.1:8000/prueba/password
 
-- Números de Fibonacci Pan-digitales:  
-I made two versions, one that is the fastest one:
+- Números de Fibonacci Pan-digitales    
+I made two versions, one that is the fastest one:  
 http://127.0.0.1:8000/prueba/fibopan_faster
-And a second one that is slower but shows in console the full fibonacci number:
+And a second one that is slower but shows in console the full fibonacci number:  
 http://127.0.0.1:8000/prueba/fibopan_full
 
 - Triángulo de Pascal  
