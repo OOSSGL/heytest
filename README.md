@@ -7,12 +7,12 @@ To resolve at least 1 of 4 different algorithm challenges and pass the "Prueba d
 # Description of the test
 A continuación encontrará 4 problemas de diferente nivel de dificultad, debe seleccionar
 libremente 1 problema y desarrollarlo cumpliendo los siguientes requerimientos:  
-● Utilizar python 3.5 o superior  
-● Crear un proyecto en Django 2.0 ó superior  
-● Instalar ​https://www.django-rest-framework.org/​ y crear un web service que al
+- Utilizar python 3.5 o superior  
+- Crear un proyecto en Django 2.0 ó superior  
+- Instalar ​https://www.django-rest-framework.org/​ y crear un web service que al
 momento de ser llamado por petición GET deberá ejecutar la lógica para el problema
 seleccionado y responder por medio de Json el resultado del problema resuelto  
-● Crear un repositorio en GitHub o Bitbucket y subir el código fuente de la solución
+- Crear un repositorio en GitHub o Bitbucket y subir el código fuente de la solución
 (compartir el acceso al encargado de la prueba)
 
 # Algorithms and status
