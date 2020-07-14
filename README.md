@@ -5,6 +5,7 @@ Oscar David Garcia Medina
 To resolve at least 1 of 4 different algorithm challenges and pass the "Prueba de Aptitud en Línea" and get the job position "Desarrollador Backend Python y Django" for the HEY business
 
 # Description of the test
+(Original text in spanish)
 A continuación encontrará 4 problemas de diferente nivel de dificultad, debe seleccionar
 libremente 1 problema y desarrollarlo cumpliendo los siguientes requerimientos:  
 - Utilizar python 3.5 o superior  
@@ -17,7 +18,7 @@ seleccionado y responder por medio de Json el resultado del problema resuelto
 
 # Algorithms and status
 - ¿Cuántos Domingos?  
-Not yet implemented
+Not implemented
 
 - Derivar Contraseña (Ethical Hacking)  
 Solved and Iplemented
@@ -26,7 +27,7 @@ Solved and Iplemented
 Solved and Iplemented
 
 - Triángulo de Pascal  
-Not yet implemented
+Not implemented
 
 # URLs
 Those are the urls to use the REST GET services of each algorithm
